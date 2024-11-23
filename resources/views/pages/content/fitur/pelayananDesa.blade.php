@@ -15,7 +15,7 @@
         ])
 
         <div class="grid  w-full  mt-[10rem]">
-            <div class="w-full flex flex-col md:gap-x-5">
+            <div class="w-full flex flex-col gap-y-[10vh]">
                 <h2 class="text-2xl md:text-3xl font-bold place-self-center">Fitur</h2>
                 {{-- Kolom Kedua --}}
 
