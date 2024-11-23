@@ -6,16 +6,19 @@
     <div class="w-full px-2 md:px-[10rem]">
 
 
-        @include('components.fitur.imageTextSectionRight', [
+<div class="mt-[100px]">
+    @include('components.fitur.imageTextSectionRight', [
             'title' => 'Pelayanan Desa',
             'text' => "Pelayanan Desa akan membantu perangkat desa dalam pembuatan surat secara cepat, & mudah. Sudah sesuai dengan Permendagri 104 Tahun 
                        2019 Tentang Pendokumentasian Administrasi Kependudukan, lebih dari 100 format surat dan formulir tersedia. Dilengkapi dengan pengarsipan surat keluar yang otomatis. 
                        Dilengkapi Barcode untuk validasi surat dan sudah dapat terintergrasi dengan Tanda Tangan Elektronik (TTE)",
             'image' => asset('images/desa5.jpg'),
         ])
+    </div>     
+    
 
         <div class="grid  w-full  mt-[10rem]">
-            <div class="w-full flex flex-col md:gap-x-5">
+            <div class="w-full flex flex-col gap-y-[10vh]">
                 <h2 class="text-2xl md:text-3xl font-bold place-self-center">Fitur</h2>
                 {{-- Kolom Kedua --}}
 
