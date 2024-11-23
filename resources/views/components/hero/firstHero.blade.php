@@ -1,6 +1,6 @@
-<section class="relative md:w-[70%] w-[27.3rem] md:mx-auto mt-[25rem] md:mt-[10rem]  text-black ">
+<section class="relative  w-full md:mx-auto mt-[25rem] flex justify-center items-center md:mt-[10rem]  text-black ">
         {{-- background-image --}}
-        <div class="absolute bg-[url('{{ asset("images/desa.jpg") }}')] bg-cover bg-center  md:top-[-9.9rem] md:left-[-16rem] top-[-25rem] left-[0rem] bg-rose-500 w-[27.3rem] md:w-[143%] md:h-[47.5rem] h-[59.5rem] -z-2"></div>
+        <div class="absolute bg-[url('{{ asset("images/desa.jpg") }}')] bg-cover bg-center  md:top-[-12.5rem] top-[-25rem] left-[0rem] bg-rose-500 w-full md:h-[47.5rem] h-[59.5rem] -z-2"></div>
 
     <!-- Konten Utama -->
     <div class="relative container  px-6 py-20 text-center z-10 ">

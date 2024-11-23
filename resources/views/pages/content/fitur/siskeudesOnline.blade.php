@@ -1,50 +1,53 @@
 @extends('layouts.app')
 
-@section('title', 'Siskeudes')
+@section('title', ' Siskeudes ')
 
 @section('content')
+    <div class="w-full px-2 md:px-[10rem]">
+
+<div class="mt-[100px]">
+        @include('components.fitur.imageTextSectionRight', [
+            'title' => 'Sistem Keuangan Desa Online',
+            'text' =>
+                'Siskeudes Online merupakan fitur sistem keuangan desa yang dapat mengoptimalkan pengelolaan keuangan dan pelaporan di tingkat desa.',
+            'image' => asset('images/desa5.jpg'),
+        ])
+</div>
+
+        <div class="grid  w-full  mt-[10rem]">
+            <div class="w-full flex flex-col gap-y-[10vh]">
+                <h2 class="text-2xl md:text-3xl font-bold place-self-center">Fitur Siskeudes Online</h2>
+                {{-- Kolom Pertama --}}
+
+                @include('components.fitur.imageTextSectionLeft', [
+                    'title' => 'Dashboard Penggunaan Dana Desa',
+                    'text' => 'Fitur dengan visualisasi data yang dapat memberikan anda informasi mengenai dana desa yang telah digunakan dari tahun ke tahun. Melalui fitur ini pula menjadikan 
+                                         informasi dana desa lebih mudah dimengerti baik oleh pemerintah setempat maupun masyarakat sehingga dapat memberikan transparasi pengelolaan dana desa yang dapat membantu dalam pengambilan keputusan hingga pemantauan pembangunan',
+                    'image' => asset('images/desa5.jpg'),
+                ])
 
 
-    @include('components.fitur.imageTextSection', [
-        'judul' => 'Sistem Keuangan Desa Online',
-        'paragraf' => "Siskeudes Online merupakan fitur sistem keuangan desa yang dapat mengoptimalkan pengelolaan
-                        keuangan dan pelaporan di tingkat desa",
-        'button' => 'Selengkapnya',
-        'image' => 'https://via.placeholder.com/400',
-        'imageRight' => true,
-    ])
+                {{-- Kolom Kedua --}}
 
-    @include('components.fitur.imageTextSection', [
-        'fitur' => 'Fitur Siskeudes Online',
-        'judul' => 'Dashboard Penggunaan Dana Desa',
-        'paragraf' =>
-           'Fitur dengan visualisasi data yang dapat memberikan anda informasi mengenai dana desa yang telah digunakan dari tahun ke tahun.
-            Melalui fitur ini pula menjadikan informasi dana desa lebih mudah dimengerti baik oleh pemerintah setempat maupun masyarakat sehingga 
-            dapat memberikan transparasi pengelolaan dana desa yang dapat membantu dalam pengambilan keputusan hingga pemantauan pembangunan',
-        'image' => 'https://via.placeholder.com/400',
-        'imageLeft' => true,
-    ])
+                @include('components.fitur.imageTextSectionRight', [
+                    'title' => 'Terintegrasi dengan sistem administrasi dan pelayanan desa',
+                    'text' =>
+                        'Selain visualisasi data, fitur siskeudes juga terintegrasi dengan sistem administrasi dan pelayanan desa. Hal ini akan meningkatkan efisiensi, transparansi, dan aksesibilitas dalam penyelenggaraan pemerintah serta pelayanan kepada masyarakat.',
+                    'image' => asset('images/desa5.jpg'),
+                ])
 
-    @include('components.fitur.imageTextSection', [
-        'judul' => 'Terintegrasi dengan sistem administrasi dan pelayanan desa',
-        'paragraf' =>
-            'Selain visualisasi data, fitur siskeudes juga terintegrasi dengan sistem administrasi dan pelayanan desa. Hal ini akan meningkatkan efisiensi, transparansi, dan aksesibilitas dalam penyelenggaraan pemerintah serta pelayanan kepada masyarakat.
-            Terintegrasi dengan sistem administrasi dan pelayanan desa',
-        'image' => 'https://via.placeholder.com/400',
-        'imageRight' => true,
-    ])
+                {{-- Kolom Keempat --}}
+                @include('components.fitur.imageTextSectionLeft', [
+                    'title' => 'Otomasi laporan pada website profil',
+                    'text' =>
+                        'Melalui Siskeudes laporan dana desa dapat dibuat secara otomatis sehingga dapat meningkatkan efesiensi waktu serta menghindari kesalahan manusia serta memastikan konsistensi penyusunan dan hasil laporan.',
+                    'image' => asset('images/desa5.jpg'),
+                ])
 
-    @include('components.fitur.imageTextSection', [
-        'judul' => 'Otomasi laporan pada website profil',
-        'paragraf' =>
-            'Melalui Siskeudes laporan dana desa dapat dibuat secara otomatis sehingga dapat meningkatkan efesiensi waktu serta menghindari kesalahan manusia serta memastikan konsistensi penyusunan dan hasil laporan.',
-        'image' => 'https://via.placeholder.com/400',
-        'imageLeft' => true,
-    ])
+            </div>
+        </div>
 
 
 
-    <div class="w-[90%] mx-auto">
-        @include('components.slider.slider')
     </div>
 @endsection

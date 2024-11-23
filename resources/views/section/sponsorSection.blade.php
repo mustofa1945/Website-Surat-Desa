@@ -1,6 +1,6 @@
 <section class="p-6 flex flex-col items-center">
     <!-- Child Pertama: h1 -->
-    <h1 class="text-[3rem] font-bold mb-6">Didukung Oleh :</h1>
+    <h1 class="md:text-[3rem] font-bold mb-6 text-[2rem]">Didukung Oleh :</h1>
   
     <!-- Child Kedua: div yang berisi 6 gambar -->
     <div class="grid grid-cols-3 gap-4 mb-6">

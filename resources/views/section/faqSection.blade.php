@@ -1,4 +1,4 @@
-<section class="flex flex-col p-6">
+<section class="flex flex-col p-6 md:w-[60%] w-full">
     <!-- Child Pertama: h1 -->
     <div class="lg:container lg:mx-auto lg:py-16 md:py-12 md:px-6 py-12 px-4">
         <h1 class="text-center dark:text-white lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 font-semibold">

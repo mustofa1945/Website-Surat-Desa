@@ -1,5 +1,5 @@
 <!-- Section -->
-<section class="container mx-auto px-6 py-16">
+<section class="container md:mx-auto px-6 box-border py-16">
     <!-- Child 1: Heading -->
     <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Solusi Yang Kami Berikan</h1>
 
@@ -36,7 +36,7 @@
 
         <!-- Anak Kedua - Child 2: Image -->
         <div class="flex justify-center md:w-1/3 h-[50%] place-self-center">
-            <img src="https://via.placeholder.com/300" alt="Sample Image" class="rounded-lg shadow-lg w-full md:w-3/4">
+            <img src="{{ asset("images/desa3.jpg") }}"" alt="Sample Image" class="bg-cover shadow-lg w-full md:w-3/4">
         </div>
 
         <!-- Anak Kedua - Child 3: Cards (flex-col) -->

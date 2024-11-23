@@ -1,49 +1,107 @@
-let lastScrollTop = 0;
-const header = document.getElementsByTagName("header");
-const DropDown = document.getElementsByClassName("dropdown");
+//Interactive Header
+class handleHeader {
+    constructor(header) {
+        this.header = document.getElementsByTagName(header);
+        this.header[0].style.transition = "all 0.4s ease";
 
-// Menambahkan transisi durasi pada header untuk perubahan opacity dan height
-header[0].style.transition = "all 0.5s ease";
-
-window.addEventListener("scroll", function () {
-    const currentScroll =
-        window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > lastScrollTop) {
-        // Scroll ke bawah, opacity turun
-        header[0].classList.replace("bg-opacity-50", "bg-opacity-80");
-        header[0].classList.replace("h-[3.5rem]", "h-[4rem]");
-    } else {
-        // Scroll ke atas, opacity kembali
-        header[0].classList.replace("bg-opacity-80", "bg-opacity-50");
-        header[0].classList.replace("h-[4rem]", "h-[3.5rem]");
-    }
-});
-
-document.body.addEventListener("click", function (e) {
-       
-    if (!DropDown[0].contains(e.target)) {
-      console.log(`Klik di luar myElement `);
-    } else {
-        console.log(`Klik di dalam myElement`);
+        this.init();
     }
 
-});
-//accodion
-let elements = document.querySelectorAll("[data-menu]");
-console.log(elements)
-for (let i = 0; i < elements.length; i++) {
-    let main = elements[i];
+    runHeader(
+        lowOpacity = "bg-opacity-50",
+        highOpacity = "bg-opacity-80",
+        lowHeight = "md:h-[3.5rem]",
+        highHeight = "md:h-[3.7rem]"
+    ) {
+        this.currentScroll =
+            window.pageYOffset || document.documentElement.scrollTop;
 
-    main.addEventListener("click", function() {
-        let element = main.parentElement.parentElement;
-        let indicators = main.querySelectorAll("img");
-        let child = element.querySelector("#menu");
-        let h = element.querySelector("#mainHeading>div>p");
+        console.log(`${lowOpacity} and ${highOpacity}`);
+        if (this.currentScroll > 0) {
+            this.header[0].classList.replace(lowOpacity, highOpacity);
 
-        h.classList.toggle("font-semibold");
-        child.classList.toggle("hidden");
-        // console.log(indicators[0]);
-        indicators[0].classList.toggle("rotate-180");
-    });
+            this.header[0].classList.replace(lowHeight, highHeight);
+        } else {
+            this.header[0].classList.replace(highOpacity, lowOpacity);
+
+            this.header[0].classList.replace(highHeight, lowHeight);
+        }
+    }
+
+    init() {
+        window.addEventListener("scroll", () => this.runHeader());
+    }
 }
+
+const Header = new handleHeader("header");
+
+//navbar Menu
+class ToogleMenu {
+    constructor(trigger, target) {
+        this.trigger = document.querySelector(trigger);
+        this.target = document.querySelector(target);
+
+        if (!this.trigger || !this.target) {
+            throw new Error("Tidak ada Property Menu");
+        }
+
+        this.init();
+    }
+
+    toggleClass(hiddenClass = "hidden", blockClass = "block") {
+        if (this.target.classList.contains(hiddenClass)) {
+            this.target.classList.replace(hiddenClass, blockClass);
+        } else {
+            this.target.classList.replace(blockClass, hiddenClass);
+        }
+    }
+
+    init() {
+        this.trigger.addEventListener("click", () => this.toggleClass());
+    }
+}
+
+const menuToggle = new ToogleMenu(".icon-menu", ".menu");
+
+const listToggle = new ToogleMenu(".list", ".list-fitur");
+
+//Slider
+
+class Slider {
+    constructor(id,perpage ,breakPerPage) {
+        this.Slider = id;
+        this.perpage = perpage
+        this.breakPerPage = breakPerPage
+        this.init();
+    }
+
+    slider1() {
+        new Splide(this.Slider, {
+            type: "loop",
+            autoplay: true,
+            interval: 2000,
+            arrows: true,
+            perPage: this.perpage,
+            perMove: 1,
+            gap: "2rem",
+            drag: "free",
+            pauseOnHover: true,
+            breakpoints: {
+                768: {
+                    perPage: this.breakPerPage,
+                    gap: "1rem",
+                },
+            },
+        }).mount();
+    }
+
+
+    init() {
+        document.addEventListener("DOMContentLoaded", ()=>  this.slider1());
+    }
+}
+
+const slider = new Slider("#image-slider" , 5 , 2);
+
+const slider2 = new Slider("#image-slider2" , 3 , 1)
+

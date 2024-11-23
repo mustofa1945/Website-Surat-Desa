@@ -4,72 +4,84 @@
  @section('title', 'Beranda')
 
  @section('content')
-     <div>
+     <div class="w-full flex justify-center items-center">
          @include('components.hero.firstHero')
      </div>
 
-     <div class="md:w-[90%] w-[25rem] flex flex-col md:mx-auto  ml-5 md:mt-[17rem] mt-[13rem] md:text-[3rem] text-[2rem]">
-         <h1 class="place-self-center">Cerita Sukses Digital</h1>
-         @include('components.slider.slider')
+     <div class="md:w-[80%] w-full h-[20rem] flex flex-col md:mx-auto md:mt-[17rem] mt-[13rem]">
+         <h1 class="place-self-center md:text-[3rem] text-[2rem]">Cerita Sukses Digital</h1>
+         @include('components.slider.slider' , ['id' => 'image-slider'])
      </div>
 
-     <div class="mt-[5rem] md:mx-auto md:w-full w-[27.5rem] md:h-[40rem] h-[57rem] box-border px-4 bg-slate-200 ">
-         @include('components.fitur.imageTextSectionLeft', [
-             'judul' => 'WebGIS DIGIDES',
-             'paragraf' => "Peta Desa menjadi salah satu aset penting bagi masyarakat desa, pemerintah, dan pihak-pihak terkait dalam proses perencanaan dan
-                                    pengelolaan wilayah. Melalui webgis, kami memfasilitasi pemetaan desa, pemantauan lingkungan, serta pengambilan keputusan yang tepat & 
-                                    berkelanjutan. Dengan WebGIS, Pemetaan Masyarakat Desa jauh lebih baik & terukur.",
-             'image' => 'https://via.placeholder.com/400',
-             'button' => 'Selengkapnya',
-             'color' => 'green',
+     <div class="mt-[5rem] md:mx-auto  w-full  box-border px-4  md:py-8 py-4 bg-slate-200 ">
+        <div class=" h-[85vh] w-full flex justify-center items-center box-border ">
+         @include('components.fitur.imageAndButtonLeft', [
+             'title' => 'WebGIS DIGIDES',
+             'text' => 'Fitur ini sangat praktis bagi warga yang ingin meminta surat jarak jauh, cukup dengan menggunakan aplikasi DIGIDES, lakukan request,
+                       mengisi form dan dapatkan kode surat yang nantinya akan dimasukkan ke Andi Smart untuk langsung mencetak surat yang telah di request..',
+             'image' => asset('images/desa4.jpg'),
+             'value' => 'Selengkapnya'
          ])
+        </div>
      </div>
 
-     <div class="mt-[5rem] md:mx-auto md:w-full w-[27.5rem] md:h-[40rem] h-[57rem] box-border px-4 bg-slate-200 ">
-         @include('components.fitur.imageTextSectionRight', [
-             'judul' => 'FITUR DIGIDES',
-             'paragraf' =>
-                 'Bersama DIGIDES, membawa desa anda ke era digital, pekerjaan jauh lebih efektif & efisien. Nikmati beragam fitur aplikasi DIGIDES dengan satu platform yang sesuai dengan UU Desa & Peraturan Menteri Dalam Negeri.',
-             'image' => 'https://via.placeholder.com/400',
-             'button' => 'LIhat Video',
-             'color' => 'green',
+     <div class="md:mx-auto md:w-full w-full  border-2 md:py-6 py-6 px-4 bg-white">
+        <div class=" h-[70vh] md:h-[85vh] w-full flex justify-center items-center box-border ">
+            @include('components.fitur.imageAndButtonRight', [
+             'title' => 'FITUR DIGIDES',
+             'text' => 'Bersama DIGIDES, membawa desa anda ke era digital, pekerjaan jauh lebih efektif & efisien.
+                        Nikmati beragam fitur aplikasi DIGIDES dengan satu platform yang sesuai dengan UU Desa & Peraturan Menteri Dalam Negeri.',
+             'image' => asset('images/desa4.jpg'),
+             'value' => 'Lihat Video'
          ])
+        </div>
      </div>
-     <div>
+
+     <div class="mt-[5rem]  bg-slate-200 md:block hidden">
          @include('section.solutionSection')
      </div>
-     <div>
-         @include('components.fitur.imageTextSectionRight', [
-             'judul' => 'Fitur Lengkap dan Mudah Digunakan',
-             'paragraf' => "DIGIDES adalah platform inovatif untuk pengelolaan desa yang menyediakan berbagai layanan seperti Layanan Administrasi, Persuratan Terstandar, Pengelolaan Pajak PBB-P2, Manajemen Bansos, Website Profil Desa, dan layanan pendukung 
-                                     lainnya seperti Siskuedes Online, WebGIS, & Pantuan Kecamatan & Kabupaten dalam Dashboard.",
-             'image' => 'https://via.placeholder.com/400',
+
+     <div class="md:mx-auto  w-full  border-2  py-6 md:py-2 px-4 bg-white ">
+        <div class=" h-[100vh] md:h-[85vh] w-full flex justify-center items-center box-border ">
+         @include('components.fitur.imageNestedListCenterLeft', [
+             'title' => 'Fitur Lengkap dan Mudah Digunakan',
+             'text' => 'DIGIDES adalah platform inovatif untuk pengelolaan desa yang menyediakan berbagai layanan seperti Layanan Administrasi, 
+                        Persuratan Terstandar, Pengelolaan Pajak PBB-P2, Manajemen Bansos, Website Profil Desa, dan layanan pendukung lainnya seperti 
+                        Siskuedes Online, WebGIS, & Pantuan Kecamatan & Kabupaten dalam Dashboard',
+             'image' => asset('images/desa4.jpg'),
              'list' => [
-                 'Mudah digunakan',
-                 'Terintegrasi antara Android dan Website',
-                 'Dapat berjalan secara online dan offline',
-                 'Mudah dalam memasukkan data',
-                 'Terintegrasi PRODESKEL, IDM, dan SDGs.',
-             ],
-             'color' => 'green',
-             'icon' => asset("images/icons/checked.png")
+                'Mudah digunakan',
+                'Terintegrasi antara Android dan Website',
+                'Dapat berjalan secara online dan offline',
+                'Mudah dalam memasukkan data',
+                'Terintegrasi PRODESKEL, IDM, dan SDGs'
+             ]
          ])
+        </div>
      </div>
-     <div class="w-full mx-auto bg-gray-200 ">
+
+     <div class=" md:mx-auto md:w-full w-full   bg-slate-200 ">
          @include('section.benefitSection')
      </div>
-     <div class="w-full bg-white mx-auto ">
+
+     <div class="md:w-full w-full  md:mx-auto  ">
          @include('section.numberUserSection')
      </div>
-     <div class="w-[90%] bg-white mx-auto ">
-         @include('section.QuestFromVillageHeadSection')
+
+     <div class="md:w-[90%] w-full md:h-[70vh] h-[60vh] md:px-0 px-5  md:mx-auto ">
+        <h1 class="place-self-center md:text-[4rem] text-[2rem] ">Apa Kata Kepala Desa ?</h1>
+         @include('components.slider.slider2')
      </div>
-     <div class="w-[80%] border-2  mx-auto mt-[3rem]">
+
+     <div class="md:w-full  mx-auto mt-[3rem]">
          @include('section.listVillageSection')
      </div>
-     <div class="w-[80%] border-2  mx-auto mt-[3rem]">
+
+     <div
+         class="md:w-full md:h-[50rem] md:py-0  py-12 box-border flex md:justify-center items-center bg-slate-200  mx-auto mt-[3rem]">
          @include('section.faqSection')
      </div>
+     
      <div class="w-full bg-white  mx-auto mt-[3rem]">
          @include('section.sponsorSection')
      </div>
