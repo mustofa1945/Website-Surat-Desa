@@ -1,4 +1,4 @@
-    <div id="{{ $id }}" class="splide w-full h-full mt-5 md:px-1 px-2">
+    <div id="image-slider" class="splide w-full h-[15rem] mt-5 md:px-1 px-2">
         <div class="splide__track h-full w-full">
             <ul class="splide__list w-full h-full">
                 <li class="splide__slide">

@@ -1,5 +1,5 @@
 
-<div id="image-slider2" class="splide w-full h-full mt-5 md:px-1 border-black">
+<div id="image-slider2" class="splide md:h-[70vh] w-[90%] h-[60vh] mt-5 md:px-1 border-black">
     <div class="splide__track h-full w-full">
         <ul class="splide__list w-full h-full">
             <li class="splide__slide">

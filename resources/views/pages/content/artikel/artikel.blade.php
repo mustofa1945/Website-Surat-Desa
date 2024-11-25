@@ -6,7 +6,7 @@
 
     <div class="flex flex-col mx-auto w-[80%] space-y-6 mt-[100px] bg-white p-4 rounded-lg shadow-lg">
         <!-- Judul Utama -->
-        <h1 class="place-self-center text-3xl font-bold text-gray-800">Artikel</h1>
+        <h1 class="place-self-center text-3xl font-bold  text-[#FF2E63]">Artikel</h1>
 
         <div class="w-full flex flex-wrap gap-3">
 

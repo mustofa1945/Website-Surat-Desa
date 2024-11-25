@@ -105,4 +105,9 @@
                 'image' => asset('images/desa4.jpg'),
             ])
         </div>
+
+        <div class="w-full  md:px-0 px-5  md:mx-auto  flex flex-col justify-center items-center py-[15vh]">
+            <h1 class="place-self-center md:text-[4rem] text-[#FF2E63] text-[2rem] ">Fitur Lainnya</h1>
+            @include('components.slider.slider-fitur')
+        </div>
 @endsection

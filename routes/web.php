@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +51,10 @@ Route::prefix('fitur')->group(function () {
         return view("pages.content.fitur.absensi");
     })->name("fitur.absensi");
 
+    Route::get('/absensi-buku', function () {
+        return view("pages.content.fitur.absensi-buku");
+    })->name("fitur.absensi-buku");
+
     Route::get('/siskeudes-online', function () {
         return view("pages.content.fitur.siskeudesOnline");
     })->name("fitur.siskeudes");
@@ -78,3 +83,8 @@ Route::get('/artikel', function () {
 Route::get('/contact', function () {
     return view('pages.content.contact.contact');
 })->name("contact");
+
+//Register
+Route::get('/daftar-digides', [RegisterController::class , 'ViewRegister'] )->name("view.register");
+Route::post('/register' , [RegisterController::class , 'handleRegister'])->name('get.form-register');
+

@@ -6,16 +6,16 @@
     <div class="w-full px-2 md:px-[10rem]">
 
 
-<div class="mt-[100px]">
-    @include('components.fitur.imageTextSectionRight', [
-            'title' => 'Pelayanan Desa',
-            'text' => "Pelayanan Desa akan membantu perangkat desa dalam pembuatan surat secara cepat, & mudah. Sudah sesuai dengan Permendagri 104 Tahun 
-                       2019 Tentang Pendokumentasian Administrasi Kependudukan, lebih dari 100 format surat dan formulir tersedia. Dilengkapi dengan pengarsipan surat keluar yang otomatis. 
-                       Dilengkapi Barcode untuk validasi surat dan sudah dapat terintergrasi dengan Tanda Tangan Elektronik (TTE)",
-            'image' => asset('images/desa5.jpg'),
-        ])
-    </div>     
-    
+        <div class="mt-[100px]">
+            @include('components.fitur.imageTextSectionRight', [
+                'title' => 'Pelayanan Desa',
+                'text' => "Pelayanan Desa akan membantu perangkat desa dalam pembuatan surat secara cepat, & mudah. Sudah sesuai dengan Permendagri 104 Tahun 
+                                   2019 Tentang Pendokumentasian Administrasi Kependudukan, lebih dari 100 format surat dan formulir tersedia. Dilengkapi dengan pengarsipan surat keluar yang otomatis. 
+                                   Dilengkapi Barcode untuk validasi surat dan sudah dapat terintergrasi dengan Tanda Tangan Elektronik (TTE)",
+                'image' => asset('images/desa5.jpg'),
+            ])
+        </div>
+
 
         <div class="grid  w-full  mt-[10rem]">
             <div class="w-full flex flex-col gap-y-[10vh]">
@@ -88,7 +88,8 @@
 
                 @include('components.fitur.imageTextSectionLeft', [
                     'title' => 'Layanan Lainnya',
-                    'text' => 'Menyediakan surat yang dapat menyesuaikan kebutuhan desa dan jadi wadah bagi desa untuk berinovasi dalam pengaplikasian surat.',
+                    'text' =>
+                        'Menyediakan surat yang dapat menyesuaikan kebutuhan desa dan jadi wadah bagi desa untuk berinovasi dalam pengaplikasian surat.',
                     'image' => asset('images/desa5.jpg'),
                 ])
             </div>
@@ -96,5 +97,10 @@
 
 
 
+    </div>
+
+    <div class="w-full  md:px-0 px-5  md:mx-auto  flex flex-col justify-center items-center py-[15vh]">
+        <h1 class="place-self-center md:text-[4rem] text-[#FF2E63] text-[2rem] ">Fitur Lainnya</h1>
+        @include('components.slider.slider-fitur')
     </div>
 @endsection

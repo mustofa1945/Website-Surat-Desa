@@ -13,7 +13,7 @@
     </div>
 
     <div class="w-full md:w-[70%]  md:px-0  md:mx-auto flex mt-[30vh] flex-col gap-y-[8vh]">
-        <h2 class="text-lg md:text-3xl font-bold place-self-center">Keuntungan menjadi member KIOS DIGIDES</h2>
+        <h2 class="text-lg md:text-3xl font-bold place-self-center text-[#FF2E63]">Keuntungan menjadi member KIOS DIGIDES</h2>
 
         <div class="w-full flex flex-col md:gap-y-[2vh] gap-y-[12vh] px-5 md:px-0">
             @include('components.card.card-for-kios', [
@@ -48,7 +48,7 @@
     </div>
 
     <div class="w-full md:w-[50%]   md:px-0  md:mx-auto flex mt-[30vh] flex-col gap-y-[8vh]">
-        <h2 class="text-lg md:text-3xl font-bold place-self-center text-center">Pembayaran apa saja yang dapat dilakukan dengan Kios
+        <h2 class="text-lg md:text-3xl font-bold place-self-center text-center text-[#FF2E63]">Pembayaran apa saja yang dapat dilakukan dengan Kios
             DIGIDES</h2>
 
         <div class="flex flex-wrap w-full md:gap-6 gap-10  justify-center items-center">
@@ -94,8 +94,8 @@
         </div>
     </div>
 
-    <div class="md:w-[50%] w-full mx-auto bg-white shadow-md mt-[10vh] rounded-md p-10 md:p-6">
-        <h2 class="w-full text-xl font-bold text-blue-600 flex justify-center  mb-4">Cara Bergabung</h2>
+    <div class="md:w-[50%] w-full mx-auto  shadow-md mt-[10vh]  p-10 md:p-6">
+        <h2 class="w-full text-xl font-bold flex justify-center  mb-4 text-[#FF2E63]">Cara Bergabung</h2>
         <ul class="list-disc space-y-4 text-gray-700 flex flex-col">
             <li>
                 <span>Download Aplikasi Kios DIGIDES di Google Play Store atau</span> 

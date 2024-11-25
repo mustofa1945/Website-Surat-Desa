@@ -13,8 +13,8 @@
 </div>
    
         {{-- fitur Umum --}}
-        <div class="relative  w-full md:w-[70%]  flex flex-col  mt-[10rem] border-4 border-black px-2 md:mx-auto ">
-            <h1 class="absolute left-[2vh] top-[-4vh] text-[40px] flex px-[1vh] bg-white h-[50px]">
+        <div class="relative  w-full md:w-[70%]  flex flex-col  mt-[10rem] border-4 border-black px-2 md:mx-auto py-[10vh] ">
+            <h1 class="absolute left-[2vh] top-[-4vh] text-[40px] flex px-[1vh] bg-white h-[50px] text-[#FF2E63]">
                 Fitur Umum
             </h1>
 
@@ -43,7 +43,7 @@
         </div>
 
         {{-- fitur Premiun --}}
-        <div class="relative  w-full md:w-[70%] flex flex-col  mt-[10rem] border-4 border-black px-2 md:mx-auto">
+        <div class="relative  w-full md:w-[70%] flex flex-col  mt-[10rem] border-4 border-black px-2 md:mx-auto py-[10vh]">
             <h1
                 class="absolute left-[2vh] top-[-4vh] md:text-[40px] text-[25px] flex-row-reverse flex px-[1vh] bg-white h-[50px]">
                 Fitur Premium
@@ -73,6 +73,11 @@
                     'Sahabat Desa akan merasakan pengalaman yang unik dengan akses ke fitur-fitur yang hanya tersedia bagi warga desa terdaftar, seperti:',
                 'image' => asset('images/desa4.jpg'),
             ])
+        </div>
+
+        <div class="w-full  md:px-0 px-5  md:mx-auto  flex flex-col justify-center items-center py-[15vh]">
+            <h1 class="place-self-center md:text-[4rem] text-[#FF2E63] text-[2rem] ">Fitur Lainnya</h1>
+            @include('components.slider.slider-fitur')
         </div>
     
 @endsection

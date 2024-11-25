@@ -9,14 +9,13 @@ class handleHeader {
 
     runHeader(
         lowOpacity = "bg-opacity-50",
-        highOpacity = "bg-opacity-80",
+        highOpacity = "bg-opacity-100",
         lowHeight = "md:h-[3.5rem]",
         highHeight = "md:h-[3.7rem]"
     ) {
         this.currentScroll =
             window.pageYOffset || document.documentElement.scrollTop;
 
-        console.log(`${lowOpacity} and ${highOpacity}`);
         if (this.currentScroll > 0) {
             this.header[0].classList.replace(lowOpacity, highOpacity);
 
@@ -68,10 +67,11 @@ const listToggle = new ToogleMenu(".list", ".list-fitur");
 //Slider
 
 class Slider {
-    constructor(id,perpage ,breakPerPage) {
+    constructor(id,perpage ,breakPerPage , gap) {
         this.Slider = id;
         this.perpage = perpage
         this.breakPerPage = breakPerPage
+        this.gap = gap
         this.init();
     }
 
@@ -83,7 +83,7 @@ class Slider {
             arrows: true,
             perPage: this.perpage,
             perMove: 1,
-            gap: "2rem",
+            gap: this.gap,
             drag: "free",
             pauseOnHover: true,
             breakpoints: {
@@ -101,7 +101,30 @@ class Slider {
     }
 }
 
-const slider = new Slider("#image-slider" , 5 , 2);
+const slider = new Slider("#image-slider" , 5 , 2 , '2rem');
 
-const slider2 = new Slider("#image-slider2" , 3 , 1)
+const slider2 = new Slider("#image-slider2" , 3 , 1 , '2rem')
+
+const sliderFitur = new Slider("#image-slider-fitur" , 3 , 1 , '2rem')
+
+class Ex{
+    #nama; // field
+    id;
+    tanggal = '2007';
+
+    constructor(nama , id , lahir){
+        this.#nama = nama;
+        this.id = id
+        this.tanggal = lahir
+
+        this.run()
+
+    }
+
+    run(){
+       console.log(`Nama saya adalah ${this.#nama}  dan id : ${this.id} . lahir : ${this.tanggal}`) 
+    }
+}
+
+const x = new Ex('kamil' , '2' , '2004')
 

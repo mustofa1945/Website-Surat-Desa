@@ -2,7 +2,7 @@
     <section class="container mx-auto md:px-6 py-16 flex-col flex md:gap-0 gap-5">
         <!-- Child 1: Header -->
         <div class="mb-8">
-            <h1 class="md:text-4xl text-[25px] font-bold text-gray-800 place-self-center text-green-500">Manfaat DIGIDES</h1>
+            <h1 class="md:text-4xl text-[25px] font-bold text-[#EAEAEA] place-self-center">Manfaat DIGIDES</h1>
         </div>
 
         <!-- Child 2: div.anak-kedua -->
@@ -10,7 +10,7 @@
 
             <!-- Anak Kedua - Child 1: Title and Cards -->
             <div class="flex flex-col items-center w-1/2 gap-x-4 md:gap-y-0">
-                <h1 class="md:text-2xl text-[20px] font-semibold text-gray-800 text-green-500">Tanpa DIGIDES</h1>
+                <h1 class="md:text-2xl text-[20px] font-semibold text-[#EAEAEA]">Tanpa DIGIDES</h1>
                 <div class="grid gap-10 md:gap-4 md:mt-0 mt-4">
 
                     @include('components.card.profile-card', [
@@ -50,7 +50,7 @@
 
             <!-- Anak Kedua - Child 3: Title and Cards (same as first child) -->
             <div class="flex flex-col w-1/2 items-center">
-                <h1 class="md:text-2xl text-[20px] font-semibold text-gray-800 text-green-500">Dengan DIGIDES</h1>
+                <h1 class="md:text-2xl text-[20px] font-semibold text-[#EAEAEA]">Dengan DIGIDES</h1>
                 <div class="grid gap-10 md:gap-4  md:px-10 md:mt-0 mt-4">
 
                     @include('components.card.profile-card', [

@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="relative bg-white overflow-x-hidden text-gray-900">
+<body class="relative bg-[#EAEAEA] overflow-x-hidden text-gray-900">
 
     <!-- Header -->
     <div class="max-w-max">
@@ -30,7 +30,7 @@
 
 
     <!-- Footer -->
-    <div class="max-w-screen-2xl bg-rose-500 mx-auto">
+    <div class="max-w-[225vh] bg-[#252A34]">
         @include('partials.footer')
     </div>
 

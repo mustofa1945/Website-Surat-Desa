@@ -17,7 +17,7 @@
 
         <div class="grid  w-full  mt-[10rem]">
             <div class="w-full flex flex-col gap-y-[10vh]">
-                <h2 class="text-2xl md:text-3xl font-bold place-self-center">Fitur Absensi dan Buku Tamu</h2>
+                <h2 class="text-2xl md:text-3xl font-bold place-self-center text-[#FF2E63]">Fitur Absensi dan Buku Tamu</h2>
                 {{-- Kolom Pertama --}}
 
                 @include('components.fitur.imageTextSectionLeft', [
@@ -63,8 +63,10 @@
 
             </div>
         </div>
+    </div>
 
-
-
+    <div class="w-full  md:px-0 px-5  md:mx-auto  flex flex-col justify-center items-center py-[15vh]">
+        <h1 class="place-self-center md:text-[4rem] text-[#FF2E63] text-[2rem] ">Fitur Lainnya</h1>
+        @include('components.slider.slider-fitur')
     </div>
 @endsection
