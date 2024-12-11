@@ -48,4 +48,3 @@
         </div>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>

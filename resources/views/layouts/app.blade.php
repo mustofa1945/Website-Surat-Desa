@@ -17,6 +17,10 @@
 </head>
 
 <body class="relative bg-[#EAEAEA] overflow-x-hidden text-gray-900">
+    {{-- @foreach ($users as $item)
+    <p>{{ dd($users->name) }}</p>
+        
+    @endforeach --}}
 
     <!-- Header -->
     <div class="max-w-max">

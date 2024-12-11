@@ -3,44 +3,46 @@
 namespace App\Services\Auth;
 
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
+use App\Services\Validation\BaseValidation;
+use Illuminate\Validation\ValidationException;
 
-class RegisterService
+class RegisterService extends BaseValidation
 {
 
-    /**
-     * Fungsi untuk memvalidasi data registrasi pengguna
-     */
-    public function validate(array $data)
-    {
-        return Validator::make($data, [
-            'username' => ['required', 'string', 'max:255',],
-            'phone_number' => ['required'],
-            'address' => ['required'],
-            'departement' => ['required']
-        ]);
-    }
-
-    /**
-     * Fungsi untuk membuat user baru setelah validasi berhasil
-     */
     public function create(array $data)
     {
-        $user = User::create([
-            'name' => $data['username'],
-            'phone_number' => $data['phone_number'],
-            'address' => $data['address'],
-            'departement' => $data['departement']
-        ]);
+        $validated = parent::handleValidation($data);
 
-        Auth::login($user);
+        try {
+            //Jika berhasil, data valid dikembalikan Dalam bentuk JSON
+            $user = User::create([
+                'name' => $data['username'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'phone_number' => $data['phone_number'],
+                'address' => $data['address'],
+                'departement' => Str::title(str_replace('_', ' ', $data['jabatan']))// Output: Wakil Desa
+            ]);
 
-        Log::info('User created successfully', ['user_id' => $user->id]);
+            Auth::login($user);
 
-        return true;
+            Log::info('User created successfully', ['user_id' => $user->id]);
 
+          return response()->json([
+                'success' => true,
+                'data' => $validated
+            ] , 200);
+
+
+        } catch (ValidationException $e) {
+            return response()->json([
+                'success' => false,
+                'data' => $e->errors(),
+            ] , 400);
+        }
     }
 }

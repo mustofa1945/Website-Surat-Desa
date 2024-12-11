@@ -2,34 +2,84 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
+use App\Services\Auth\LoginService;
 use App\Http\Controllers\Controller;
 use App\Services\Auth\RegisterService;
-use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
     public $RegisterService;
-    public function __construct(RegisterService $service)
+
+    
+    public function __construct(RegisterService $service )
     {
         $this->RegisterService = $service;
     }
-
-    public function ViewRegister()
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
     {
         return view('pages.auth.form-register');
+    
     }
 
-    public function handleRegister(Request $request)
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create(Request $request)
     {
-
-        //Cek Apakah Data Susah Sesuai dengan Regex yang telah di set
-        $validator = $this->RegisterService->validate($request->input());
-        $validator->validate();
-        
         $Create = $this->RegisterService->create($request->input());
 
-        //Kembali ke halaman Sebelumnya
-        return redirect()->back()->with('success', 'Registrasi berhasil! Silakan login.');
+    if ($Create) {
 
+            return redirect()->route('daftar-digides.index')->with('success', 'Registrasi berhasil! Silakan login.');
+
+        } else {
+
+            return redirect()->back()->with('error', 'Gagal Registrasi');
+            
+        }
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
     }
 }

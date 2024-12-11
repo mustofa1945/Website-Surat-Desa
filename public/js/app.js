@@ -40,6 +40,7 @@ class ToogleMenu {
         this.trigger = document.querySelector(trigger);
         this.target = document.querySelector(target);
 
+        console.log(this.trigger);
         if (!this.trigger || !this.target) {
             throw new Error("Tidak ada Property Menu");
         }
@@ -63,6 +64,8 @@ class ToogleMenu {
 const menuToggle = new ToogleMenu(".icon-menu", ".menu");
 
 const listToggle = new ToogleMenu(".list", ".list-fitur");
+
+const SettingToggle = new ToogleMenu('.list-setting' , '.target-list-setting')
 
 //Slider
 
@@ -107,24 +110,4 @@ const slider2 = new Slider("#image-slider2" , 3 , 1 , '2rem')
 
 const sliderFitur = new Slider("#image-slider-fitur" , 3 , 1 , '2rem')
 
-class Ex{
-    #nama; // field
-    id;
-    tanggal = '2007';
-
-    constructor(nama , id , lahir){
-        this.#nama = nama;
-        this.id = id
-        this.tanggal = lahir
-
-        this.run()
-
-    }
-
-    run(){
-       console.log(`Nama saya adalah ${this.#nama}  dan id : ${this.id} . lahir : ${this.tanggal}`) 
-    }
-}
-
-const x = new Ex('kamil' , '2' , '2004')
 

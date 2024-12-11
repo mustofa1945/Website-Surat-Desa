@@ -16,7 +16,7 @@
 
         <!-- Call to Action Button -->
         <div class="flex justify-center space-x-4">
-            <a href="{{ route('view.register') }}"
+            <a href="{{ route('daftar-digides.index') }}"
                class="px-6 py-3 bg-[#FF2E63] text-white font-semibold rounded-md hover:bg-[transparent] hover:text-[#FF2E63] hover:border hover:border-[#FF2E63] transition duration-300">
                 Get Started
             </a>
